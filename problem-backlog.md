@@ -11,9 +11,8 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 
 | Mã | Tóm tắt | Loại | Mục guideline | Trạng thái | Kết quả |
 |---|---|---|---|---|---|
-| [P-001](#p-001) | Người ngồi sau xe máy: box riêng hay gộp với người lái | Guideline mơ hồ | §3.2 | ✅ Đã chốt | [QĐ-001](so-quyet-dinh.md#qđ-001) |
-| [P-002](#p-002) | Xe bị che khuất hơn một nửa | Guideline chưa nói tới | §3.4 | ↗️ Hỏi BTC | — |
-| [P-003](#p-003) | Phải vẽ lại box y hệt qua nhiều frame liên tiếp | Pain point công cụ | — | 🗣️ Đang bàn | — |
+| [P-001](#p-001) | vật thể ở xa hoặc hiển thị không rõ đến mức nào thì không cần vẽ |Guideline chưa nói tới | Chưa xác định | Mở | - |
+<!-- ai có trường hợp cần hỏi mà chưa có trong guideline ghi ở đây theo mẫu trên, và chi tiết ở dưới (chỗ có comment) -->
 
 **Loại**
 
@@ -30,22 +29,32 @@ mỗi người sẽ tự xử lý theo một kiểu — và đó là nguồn l�
 
 ## P-001
 
-**Người ngồi sau xe máy: box riêng hay gộp chung với người lái**
+ **Ngưỡng bỏ qua vật thể ở xa hoặc không nhìn thấy rõ**
 
-- **Loại:** Guideline mơ hồ
-- **Mục guideline:** §3.2 — "mỗi người một bounding box"
-- **Người phát hiện:** @thanh-vien-b · 16/09/2026
-- **Link CVAT:**
-  - https://cvat.example.com/tasks/12/jobs/101?frame=37 — hai người, gần như chồng khít
-  - https://cvat.example.com/tasks/12/jobs/101?frame=112 — người ngồi sau chỉ lộ đầu
-- **Mô tả:** §3.2 nói mỗi người một box, nhưng hình minh hoạ trong guideline lại vẽ một box
-  cho cả xe máy lẫn người trên xe.
-- **Các cách hiểu:**
-  1. Theo câu chữ: người ngồi sau có box `nguoi` riêng.
-  2. Theo hình minh hoạ: không vẽ box `nguoi` cho ai đang ngồi trên xe.
-- **Xử lý tạm trong lúc chờ:** vẽ box riêng và gắn tag `can_xem_lai` để dễ lọc ra sửa.
-- **Kết quả:** ✅ [QĐ-001](so-quyet-dinh.md#qđ-001)
-
+  - **Loại:** Guideline chưa nói tới
+  - **Mục guideline:** Chưa xác định
+  - **Người phát hiện:** Nguyễn Tú Anh (@github-handle) · 16/09/2026
+  - **Link CVAT:**
+    - https://cvat.note.transformerlabs.ai/tasks/206/jobs/1674 (frame 1/25)
+      — vật thể ở xa, kích thước nhỏ và khó xác định class
+  - **Mô tả:** Chưa rõ vật thể ở xa hoặc hiển thị không rõ đến mức nào thì
+  không cần
+    gán nhãn. Guideline chưa quy định kích thước tối thiểu theo pixel, tỷ lệ
+    nhìn thấy
+    hoặc mức độ nhận diện cần thiết.
+  - **Các cách hiểu:**
+    1. Vẫn gán nếu còn nhận diện chắc chắn được class, không phụ thuộc
+    khoảng cách.
+    2. Không gán nếu không thể xác định chắc chắn class.
+    3. Không gán nếu bbox hoặc polygon nhỏ hơn một ngưỡng pixel do BTC quy
+    định.
+  - **Xử lý tạm trong lúc chờ:** Gán các vật thể ở xa nhưng vẫn nhận diện rõ
+  class.
+    Với vật thể quá mờ hoặc không xác định chắc chắn, ghi lại frame và tạm
+    bỏ qua để
+    chờ nhóm/BTC chốt; không tự đặt ngưỡng khoảng cách.
+  - **Kết quả:** 🔴 Mở
+<!-- ghi chi tiết ra đây -->
 ## P-002
 
 **Xe bị che khuất hơn một nửa**
