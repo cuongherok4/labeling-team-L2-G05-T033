@@ -2,7 +2,7 @@
 
 ## 1. Thông tin công việc
 
-- **Job ID:** 1460
+- **Job ID:** 1462
 - **Phạm vi ảnh đã thực hiện:** Từ ảnh 75 đến ảnh 99
 - **Số lượng nhãn đã gán:** 271 nhãn
 
