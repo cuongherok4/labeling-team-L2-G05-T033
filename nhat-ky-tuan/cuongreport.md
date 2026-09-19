@@ -8,7 +8,7 @@
 | Thành viên | Vị trí | Phân công tuần này |
 |---|---|---|
 |Nguyễn Tú Anh| Lead, Annotator, Reviewer | Segmentation job 1674 |
-|Hoàng Mạnh Cường| Annotator, Reviewer | Segmentation job 1676, BBox, Polygon job 1460|
+|Hoàng Mạnh Cường| Annotator, Reviewer | BBox job 1676, Segmentation job 1460|
 |Hoàng Văn Long| Annotator, Reviewer | Segmentation ..., BBox, Polygon job 1462 |
 |Lê Hữu Sơn| Annotator, Reviewer | Segmentation ..., BBox, Polygon job 1459 |
 |Nguyễn Minh Quân| Annotator, Reviewer | Segmentation ..., BBox, Polygon job 1458 |
@@ -18,11 +18,11 @@
 | # | Nội dung công việc | Annotator | Reviewer | Hoàn thành | Ghi chú |
 |---|---|---|---|---|---|
 | 1 | Segmentation 25 frame | Nguyễn Tú Anh | Hoàng Mạnh Cường | 20% | Vẽ được 5/25 frame, chưa review |
-| 2 | BBox, Polygon, Polyline 25 frame (job 1460) | Hoàng Mạnh Cường | Hoàng Văn Long | ✅ 100% | Đã vẽ xong 25/25 frame (bbox+polygon+polyline), đẩy lên CVAT-online. 17/17 issue đã resolved. |
+| 2 | BBox 25 frame (job 1676) | Hoàng Mạnh Cường | Hoàng Văn Long | ✅ 100% | Đã hoàn thành 25/25 frame, cập nhật lên CVAT-online và xử lý xong 17/17 issue. |
 | 3 | BBox, Polygon 50 frame | Hoàng Văn Long | Lê Hữu Sơn | ...% | Vẽ được .../50 frame, chưa review |
 | 4 | BBox, Polygon 50 frame | Lê Hữu Sơn | Nguyễn Minh Quân | ...% | Vẽ được .../50 frame, chưa review |
 | 5 | BBox, Polygon 50 frame | Nguyễn Minh Quân | Nguyễn Tú Anh | ...% | Vẽ được .../50 frame, chưa review |
-| 6 | Segmentation 25 frame (job 1676) | Hoàng Mạnh Cường | *(chưa phân công)* | ✅ 100% | Đã vẽ xong 25/25 frame, đẩy lên CVAT-online. Job này chưa có trong bảng phân công gốc, xin Lead bổ sung. |
+| 6 | Segmentation 25 frame (job 1460) | Hoàng Mạnh Cường | *(chưa phân công)* | ✅ 100% | Đã hoàn thành 25/25 frame và cập nhật lên CVAT-online. Job này chưa có trong bảng phân công gốc, nhờ Lead bổ sung reviewer. |
 
 Mức hoàn thành: ✅ xong **và đã qua review** · 🟡 đang làm (ghi %) · ⛔ bị chặn (ghi lý do) · ⬜ chưa bắt đầu
 
